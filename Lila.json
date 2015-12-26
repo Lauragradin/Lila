@@ -1,0 +1,1203 @@
+{
+	"application": {
+		"title": "Lila",
+		"theme": "bootswatch-flatly",
+		"collections": [
+			{
+				"name": "clients",
+				"fields": [
+					{
+						"name": "name",
+						"title": "Nombre",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "dni",
+						"title": "DNI",
+						"type": "string",
+						"required": true
+					},
+					{
+						"name": "mobilePhoneNumber",
+						"title": "Teléfono móvil",
+						"type": "string"
+					},
+					{
+						"name": "phoneNumber",
+						"title": "Teléfono fijo",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"title": "Email",
+						"type": "email"
+					},
+					{
+						"name": "whatsApp",
+						"title": "¿Tiene WhatsApp?",
+						"type": "bool",
+						"input": "checkbox"
+					},
+					{
+						"name": "notes",
+						"title": "Notas",
+						"input": "textarea",
+						"type": "string"
+					},
+					{
+						"name": "busStop",
+						"title": "Parada",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "partner",
+						"title": "Acompañante",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "relations",
+						"title": "Amigos",
+						"type": "string",
+						"input": "select-multiple"
+					}
+				],
+				"type": "collection"
+			},
+			{
+				"name": "suppliers",
+				"fields": [
+					{
+						"name": "name",
+						"title": "Nombre",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "cif",
+						"title": "CIF",
+						"type": "string"
+					},
+					{
+						"name": "type",
+						"title": "Tipo de servicio",
+						"input": "select",
+						"input_items": [
+							{
+								"value": "hotel",
+								"title": "Hotel"
+							},
+							{
+								"value": "bus",
+								"title": "Empresa de autobuses"
+							},
+							{
+								"value": "restaurant",
+								"title": "Restaurante"
+							},
+							{
+								"value": "other",
+								"title": "Otro"
+							},
+							{
+								"value": "wholesale",
+								"title": "Mayorista de viajes"
+							}
+						],
+						"type": "string"
+					},
+					{
+						"name": "mobilePhoneNumber",
+						"title": "Teléfono móvil",
+						"type": "string"
+					},
+					{
+						"name": "phoneNumber",
+						"title": "Teléfono fijo",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"title": "E-mail",
+						"type": "email"
+					},
+					{
+						"name": "webpage",
+						"title": "Página web",
+						"type": "string"
+					},
+					{
+						"name": "contactPerson",
+						"title": "Persona de contacto",
+						"type": "string"
+					},
+					{
+						"name": "whatsApp",
+						"title": "¿Tiene WhatsApp?",
+						"type": "string",
+						"input": "checkbox"
+					},
+					{
+						"name": "notes",
+						"title": "Notas",
+						"input": "textarea",
+						"type": "string"
+					},
+					{
+						"name": "tags",
+						"title": "Tags",
+						"type": "array",
+						"input": "tags"
+					}
+				],
+				"type": "collection"
+			},
+			{
+				"name": "busStops",
+				"type": "collection",
+				"fields": [
+					{
+						"name": "name",
+						"title": "Nombre",
+						"type": "string"
+					},
+					{
+						"name": "street",
+						"title": "Calle",
+						"type": "string",
+						"required": true
+					},
+					{
+						"name": "council",
+						"title": "Municipio",
+						"type": "string"
+					},
+					{
+						"name": "zipCode",
+						"title": "CP",
+						"type": "string"
+					},
+					{
+						"name": "province",
+						"title": "Provincia",
+						"type": "string"
+					},
+					{
+						"name": "country",
+						"title": "País",
+						"type": "string"
+					},
+					{
+						"name": "latitude",
+						"title": "Latitud",
+						"type": "float"
+					},
+					{
+						"name": "longitude",
+						"title": "Longitud",
+						"type": "string"
+					}
+				]
+			},
+			{
+				"name": "seat",
+				"type": "collection",
+				"fields": [
+					{
+						"name": "occupied",
+						"title": "Ocupado",
+						"type": "bool",
+						"default": "false"
+					},
+					{
+						"name": "reserved",
+						"title": "Reservadoo",
+						"type": "bool",
+						"default": "false"
+					},
+					{
+						"name": "traveler",
+						"title": "Ciente",
+						"type": "string",
+						"input": "select"
+					}
+				]
+			},
+			{
+				"name": "traveler",
+				"type": "collection",
+				"fields": [
+					{
+						"name": "travel",
+						"title": "Viaje",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "client",
+						"title": "Cliente",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "bus",
+						"title": "Autobús",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "stop",
+						"title": "Parada",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "plannedTakeOffTime",
+						"title": "Hora de recogida",
+						"type": "date",
+						"input": "datepicker"
+					},
+					{
+						"name": "effectiveTakeOffTime",
+						"title": "Hora de recogida real",
+						"type": "string"
+					},
+					{
+						"name": "takeOffNoticed",
+						"title": "¿Avisado?",
+						"type": "bool",
+						"input": "radio"
+					},
+					{
+						"name": "takeOffNoticedTime",
+						"title": "Hora a la que fue avisado.",
+						"type": "string"
+					},
+					{
+						"name": "notPresented",
+						"title": "¿Ausente?",
+						"type": "bool",
+						"default": "false"
+					},
+					{
+						"name": "notes",
+						"title": "Notas",
+						"type": "string",
+						"input": "textarea"
+					}
+				]
+			},
+			{
+				"name": "travelBuses",
+				"type": "collection",
+				"fields": [
+					{
+						"name": "supplier",
+						"title": "Proveedor",
+						"type": "string",
+						"input": "select"
+					},
+					{
+						"name": "name",
+						"title": "Nombre",
+						"type": "string"
+					},
+					{
+						"name": "capacity",
+						"title": "Capacidad",
+						"type": "integer"
+					},
+					{
+						"name": "responsible",
+						"title": "Persona responsable",
+						"type": "string"
+					},
+					{
+						"name": "seats",
+						"title": "Asientos",
+						"type": "array"
+					},
+					{
+						"name": "stops",
+						"title": "Paradas",
+						"type": "array",
+						"input": "select-multiple"
+					},
+					{
+						"name": "driver",
+						"title": "Nombre",
+						"type": "string"
+					},
+					{
+						"name": "phonenumber",
+						"title": "Número de teléfono",
+						"type": "string"
+					},
+					{
+						"name": "mobileNumber",
+						"title": "Teléfono móvil",
+						"type": "string"
+					},
+					{
+						"name": "email",
+						"title": "Email",
+						"type": "email"
+					},
+					{
+						"name": "notes",
+						"title": "Notas",
+						"type": "string"
+					},
+					{
+						"name": "whatsapp",
+						"title": "¿Tiene whatsapp?",
+						"type": "string",
+						"input": "checkbox"
+					}
+				]
+			},
+			{
+				"name": "travels",
+				"type": "collection",
+				"fields": [
+					{
+						"name": "name",
+						"title": "Nombre",
+						"type": "string"
+					},
+					{
+						"name": "departureDay",
+						"title": "Día de salida",
+						"type": "date",
+						"input": "datepicker"
+					},
+					{
+						"name": "departureTime",
+						"title": "Hora de salida",
+						"type": "string",
+						"format": "hh:mm"
+					},
+					{
+						"name": "returnDay",
+						"title": "Día de llegada",
+						"type": "date",
+						"input": "datepicker"
+					},
+					{
+						"name": "returnTime",
+						"title": "Hora de llegada",
+						"type": "string",
+						"format": "hh:mm"
+					},
+					{
+						"name": "destiny",
+						"title": "Destino",
+						"type": "string"
+					},
+					{
+						"name": "description",
+						"title": "Descripción",
+						"type": "string"
+					},
+					{
+						"name": "notes",
+						"title": "Notas",
+						"type": "string",
+						"input": "textarea"
+					},
+					{
+						"name": "buses",
+						"title": "Autobuses",
+						"type": "array",
+						"input": "select-multiple"
+					},
+					{
+						"name": "stops",
+						"title": "Paradas",
+						"type": "array",
+						"input": "select-multiple"
+					},
+					{
+						"name": "travelers",
+						"title": "Viajeros",
+						"type": "array",
+						"input": "select-multiple"
+					},
+					{
+						"name": "tags",
+						"title": "Etiquetas",
+						"type": "array",
+						"input": "tags"
+					},
+					{
+						"name": "documents",
+						"title": "Documentos",
+						"type": "array"
+					},
+					{
+						"name": "restaurants",
+						"title": "Restaurantes",
+						"type": "array",
+						"input": "select-multiple"
+					},
+					{
+						"name": "hotels",
+						"title": "Hoteles",
+						"type": "array",
+						"input": "select-multiple"
+					},
+					{
+						"name": "rooming",
+						"title": "Habitaciones",
+						"type": "array"
+					}
+				]
+			}
+		],
+		"queries": [
+			{
+				"name": "current_user_data",
+				"collection": "users",
+				"filter": {
+					"_id": "Meteor.userId()"
+				},
+				"find_one": true
+			},
+			{
+				"name": "clients",
+				"collection": "clients"
+			},
+			{
+				"name": "clients_empty",
+				"collection": "clients",
+				"filter": {
+					"_id": null
+				},
+				"find_one": true
+			},
+			{
+				"name": "client",
+				"collection": "clients",
+				"filter": {
+					"_id": ":clientId"
+				},
+				"find_one": true
+			},
+			{
+				"name": "travels",
+				"collection": "travels"
+			},
+			{
+				"name": "travels_empty",
+				"collection": "travels",
+				"filter": {
+					"_id": null
+				},
+				"find_one": true
+			},
+			{
+				"name": "travel",
+				"collection": "travels",
+				"filter": {
+					"_id": ":travelId"
+				},
+				"find_one": true
+			},
+			{
+				"name": "suppliers",
+				"collection": "suppliers"
+			},
+			{
+				"name": "suppliers_empty",
+				"collection": "suppliers",
+				"filter": {
+					"_id": null
+				},
+				"find_one": true
+			},
+			{
+				"name": "supplier",
+				"collection": "suppliers",
+				"filter": {
+					"_id": ":supplierId"
+				},
+				"find_one": true
+			},
+			{
+				"name": "busStops",
+				"collection": "busStops"
+			},
+			{
+				"name": "busStops_empty",
+				"collection": "busStops",
+				"filter": {
+					"_id": null
+				},
+				"find_one": true
+			},
+			{
+				"name": "busStop",
+				"collection": "busStops",
+				"filter": {
+					"_id": ":busStopId"
+				},
+				"find_one": true
+			},
+			{
+				"name": "travelBuses",
+				"collection": "travelBuses"
+			},
+			{
+				"name": "travelBuses_empty",
+				"collection": "travelBuses",
+				"filter": {
+					"_id": null
+				},
+				"find_one": true
+			},
+			{
+				"name": "travelBus",
+				"collection": "travelBuses",
+				"filter": {
+					"_id": ":travelBusId"
+				},
+				"find_one": true
+			},
+			{
+				"name": "suppliersFilter",
+				"collection": "suppliers",
+				"filter": {
+					"type": ":type"
+				}
+			}
+		],
+		"public_zone": {
+			"navbar_class": "navbar-inverse navbar-fixed-top",
+			"pages": [
+				{
+					"name": "home_public",
+					"components": [
+						{
+							"name": "home_jumbotron",
+							"title": "Viajes Lila",
+							"type": "jumbotron",
+							"text": "Bienvenido a la aplicación de viajes Lila.<br/>\nSi desea empezar a usar la aplicación, por favor conéctese para acceder a las diferentes opciones.\n",
+							"button_title": "Continuar",
+							"button_route": "login"
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "login",
+					"template": "login",
+					"type": "page"
+				},
+				{
+					"name": "register",
+					"template": "register",
+					"type": "page"
+				},
+				{
+					"name": "forgot_password",
+					"template": "forgot_password",
+					"type": "page"
+				},
+				{
+					"name": "reset_password",
+					"template": "reset_password",
+					"route_params": [
+						"resetPasswordToken"
+					],
+					"type": "page"
+				}
+			],
+			"components": [
+				{
+					"name": "left_menu",
+					"type": "menu",
+					"class": "nav navbar-nav",
+					"dest_selector": "#menu",
+					"items": [
+						{
+							"title": "Home",
+							"route": "home_public"
+						}
+					]
+				},
+				{
+					"name": "right_menu",
+					"type": "menu",
+					"class": "nav navbar-nav navbar-right",
+					"dest_selector": "#menu",
+					"items": [
+						{
+							"title": "Register",
+							"route": "register"
+						},
+						{
+							"title": "Login",
+							"route": "login"
+						}
+					]
+				}
+			],
+			"type": "zone"
+		},
+		"private_zone": {
+			"navbar_class": "navbar-default navbar-fixed-top",
+			"pages": [
+				{
+					"name": "home_private",
+					"type": "page",
+					"components": [
+						{
+							"name": "home_private_jumbotron",
+							"title": "¡Bienvenido!",
+							"text": " Por favor tenga en cuenta que la aplicación aún está en desarrollo por lo que es muy posible que tenga algunos errores.<br />\nSi encuentra alguno comuníquenoslo y será solucionado en la mayor brevedad posible<br/>\nAtentamente el equipo de desarrollo.  ",
+							"type": "jumbotron"
+						}
+					]
+				},
+				{
+					"name": "clients",
+					"components": [
+						{
+							"name": "view",
+							"type": "data_view",
+							"title": "Clientes",
+							"text_if_empty": "No hay clientes",
+							"query_name": "clients",
+							"insert_route": "clients.insert",
+							"edit_route": "clients.edit",
+							"edit_route_params": [
+								{
+									"name": "clientId",
+									"value": "this._id"
+								}
+							],
+							"details_route": "clients.details",
+							"details_route_params": [
+								{
+									"name": "clientId",
+									"value": "this._id"
+								}
+							],
+							"insert_button_title": "Nuevo cliente"
+						}
+					],
+					"pages": [
+						{
+							"name": "insert",
+							"components": [
+								{
+									"name": "insert_form",
+									"type": "form",
+									"mode": "insert",
+									"title": "Nuevo cliente",
+									"query_name": "clients_empty",
+									"submit_route": "clients",
+									"cancel_route": "clients"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "details",
+							"route_params": [
+								"clientId"
+							],
+							"components": [
+								{
+									"name": "details_form",
+									"type": "form",
+									"mode": "read_only",
+									"title": "Details",
+									"layout": "horizontal",
+									"query_name": "client",
+									"close_route": "clients",
+									"back_route": "clients"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "edit",
+							"route_params": [
+								"clientId"
+							],
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Editar cliente",
+									"submit_route": "clients",
+									"cancel_route": "clients",
+									"query_name": "client"
+								}
+							],
+							"type": "page"
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "busStops",
+					"components": [
+						{
+							"name": "view",
+							"type": "data_view",
+							"title": "Paradas",
+							"text_if_empty": "No hay paradas",
+							"query_name": "busStops",
+							"insert_route": "busStops.insert",
+							"edit_route": "busStops.edit",
+							"edit_route_params": [
+								{
+									"name": "busStopId",
+									"value": "this._id"
+								}
+							],
+							"details_route": "busStops.details",
+							"details_route_params": [
+								{
+									"name": "busStopId",
+									"value": "this._id"
+								}
+							],
+							"insert_button_title": "Nueva parada"
+						}
+					],
+					"pages": [
+						{
+							"name": "insert",
+							"components": [
+								{
+									"name": "insert_form",
+									"type": "form",
+									"mode": "insert",
+									"title": "Nueva parada",
+									"query_name": "busStops_empty",
+									"submit_route": "busStops",
+									"cancel_route": "busStops"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "details",
+							"route_params": [
+								"busStopId"
+							],
+							"components": [
+								{
+									"name": "details_form",
+									"type": "form",
+									"mode": "read_only",
+									"title": "Detalles",
+									"layout": "horizontal",
+									"query_name": "busStop",
+									"close_route": "busStops",
+									"back_route": "busStops"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "edit",
+							"route_params": [
+								"busStopId"
+							],
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Editar parada",
+									"submit_route": "busStops",
+									"cancel_route": "busStops",
+									"query_name": "busStop"
+								}
+							],
+							"type": "page"
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "travelBuses",
+					"components": [
+						{
+							"name": "view",
+							"type": "data_view",
+							"title": "Autobuses",
+							"text_if_empty": "No hay autobuses",
+							"query_name": "travelBuses",
+							"insert_route": "travelBuses.insert",
+							"edit_route": "travelBuses.edit",
+							"edit_route_params": [
+								{
+									"name": "travelBusId",
+									"value": "this._id"
+								}
+							],
+							"details_route": "travelBuses.details",
+							"details_route_params": [
+								{
+									"name": "travelBusId",
+									"value": "this._id"
+								}
+							],
+							"insert_button_title": "Nuevo autobús."
+						}
+					],
+					"pages": [
+						{
+							"name": "insert",
+							"components": [
+								{
+									"name": "insert_form",
+									"type": "form",
+									"mode": "insert",
+									"title": "Nuevo autobús",
+									"query_name": "travelBuses_empty",
+									"submit_route": "travelBuses",
+									"cancel_route": "travelBuses"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "details",
+							"route_params": [
+								"travelBusId"
+							],
+							"components": [
+								{
+									"name": "details_form",
+									"type": "form",
+									"mode": "read_only",
+									"title": "Details",
+									"layout": "horizontal",
+									"query_name": "travelBus",
+									"close_route": "travelBuses",
+									"back_route": "travelBuses"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "edit",
+							"route_params": [
+								"travelBusId"
+							],
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Editar autobús",
+									"submit_route": "travelBuses",
+									"cancel_route": "travelBuses",
+									"query_name": "travelBus"
+								}
+							],
+							"type": "page"
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "travels",
+					"components": [
+						{
+							"name": "view",
+							"type": "data_view",
+							"title": "Viajes",
+							"text_if_empty": "No hay viajes",
+							"query_name": "travels",
+							"insert_route": "travels.insert",
+							"edit_route": "travels.edit",
+							"edit_route_params": [
+								{
+									"name": "travelId",
+									"value": "this._id"
+								}
+							],
+							"details_route": "travels.details",
+							"details_route_params": [
+								{
+									"name": "travelId",
+									"value": "this._id"
+								}
+							],
+							"insert_button_title": "Nuevo viaje"
+						}
+					],
+					"pages": [
+						{
+							"name": "insert",
+							"components": [
+								{
+									"name": "insert_form",
+									"type": "form",
+									"mode": "insert",
+									"title": "Nuevo viaje",
+									"query_name": "travels_empty",
+									"submit_route": "travels",
+									"cancel_route": "travels"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "details",
+							"route_params": [
+								"travelId"
+							],
+							"components": [
+								{
+									"name": "details_form",
+									"type": "form",
+									"mode": "read_only",
+									"title": "Details",
+									"layout": "horizontal",
+									"query_name": "travel",
+									"close_route": "travels",
+									"back_route": "travels"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "edit",
+							"route_params": [
+								"travelId"
+							],
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Editar viaje",
+									"submit_route": "travels",
+									"cancel_route": "travels",
+									"query_name": "travel"
+								}
+							],
+							"type": "page"
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "suppliers",
+					"components": [
+						{
+							"name": "view",
+							"type": "data_view",
+							"title": "Proveedores",
+							"text_if_empty": "No hay proveedores",
+							"query_name": "suppliers",
+							"insert_route": "suppliers.insert",
+							"edit_route": "suppliers.edit",
+							"edit_route_params": [
+								{
+									"name": "supplierId",
+									"value": "this._id"
+								}
+							],
+							"details_route": "suppliers.details",
+							"details_route_params": [
+								{
+									"name": "supplierId",
+									"value": "this._id"
+								}
+							],
+							"insert_button_title": "Nuevo proveedor."
+						}
+					],
+					"pages": [
+						{
+							"name": "insert",
+							"components": [
+								{
+									"name": "insert_form",
+									"type": "form",
+									"mode": "insert",
+									"title": "Nuevo proveedor",
+									"query_name": "suppliers_empty",
+									"submit_route": "suppliers",
+									"cancel_route": "suppliers"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "details",
+							"route_params": [
+								"supplierId"
+							],
+							"components": [
+								{
+									"name": "details_form",
+									"type": "form",
+									"mode": "read_only",
+									"title": "Detalles",
+									"layout": "horizontal",
+									"query_name": "supplier",
+									"close_route": "suppliers",
+									"back_route": "suppliers"
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "edit",
+							"route_params": [
+								"supplierId"
+							],
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Editar proveedor",
+									"submit_route": "suppliers",
+									"cancel_route": "suppliers",
+									"query_name": "supplier"
+								}
+							],
+							"type": "page"
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "user_settings",
+					"pages": [
+						{
+							"name": "profile",
+							"components": [
+								{
+									"name": "edit_form",
+									"type": "form",
+									"mode": "update",
+									"title": "Edit your profile",
+									"submit_route": "user_settings.profile",
+									"query_name": "current_user_data",
+									"fields": [
+										{
+											"name": "profile.name",
+											"title": "Name",
+											"required": true,
+											"type": "string"
+										},
+										{
+											"name": "profile.email",
+											"title": "E-mail",
+											"type": "email",
+											"required": true
+										}
+									]
+								}
+							],
+							"type": "page"
+						},
+						{
+							"name": "change_pass",
+							"template": "change_pass",
+							"type": "page"
+						}
+					],
+					"components": [
+						{
+							"name": "side_menu",
+							"type": "menu",
+							"class": "nav nav-stacked nav-pills",
+							"items": [
+								{
+									"title": "Profile",
+									"route": "user_settings.profile"
+								},
+								{
+									"title": "Change password",
+									"route": "user_settings.change_pass"
+								}
+							]
+						}
+					],
+					"type": "page"
+				},
+				{
+					"name": "logout",
+					"template": "logout",
+					"type": "page"
+				}
+			],
+			"components": [
+				{
+					"name": "left_menu",
+					"type": "menu",
+					"class": "nav navbar-nav",
+					"dest_selector": "#menu",
+					"items": [
+						{
+							"title": "Home",
+							"route": "home_private"
+						},
+						{
+							"title": "Clientes",
+							"route": "clients"
+						},
+						{
+							"title": "Proveedores",
+							"route": "suppliers"
+						},
+						{
+							"title": "Viajes",
+							"route": "travels"
+						},
+						{
+							"title": "Paradas",
+							"route": "busStops"
+						},
+						{
+							"title": "Autobuses",
+							"route": "travelBuses"
+						}
+					]
+				},
+				{
+					"name": "right_menu",
+					"type": "menu",
+					"class": "nav navbar-nav navbar-right",
+					"dest_selector": "#menu",
+					"items": [
+						{
+							"title": "{{userEmail}}",
+							"items": [
+								{
+									"title": "Settings",
+									"route": "user_settings"
+								},
+								{
+									"title": "Logout",
+									"route": "logout"
+								}
+							]
+						}
+					]
+				}
+			],
+			"type": "zone"
+		},
+		"free_zone": {
+			"type": "zone"
+		},
+		"packages": {}
+	}
+}
